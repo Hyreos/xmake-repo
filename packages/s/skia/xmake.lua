@@ -27,7 +27,7 @@ package("skia")
     end
     add_links("skia")
 
-    local components = {"gpu", "pdf", "nvpr"}
+    local components = {"gpu", "pdf", "nvpr", "vulkan"}
     for _, component in ipairs(components) do
         add_configs(component, {description = "Enable " .. component .. " support.", default = true, type = "boolean"})
     end
